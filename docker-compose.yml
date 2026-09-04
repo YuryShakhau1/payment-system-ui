@@ -1,0 +1,10 @@
+services:
+
+  payment-system-ui:
+    image: ghcr.io/yuryshakhau1/payment-system-ui:1.0.0
+    container_name: payment_system_ui
+    environment:
+      - VITE_BACKEND_API_URL=${VITE_BACKEND_API_URL}
+    ports:
+      - "3000:80"
+    restart: always
